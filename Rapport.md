@@ -1,5 +1,8 @@
 # Rapport TP3
 ## NGO Hoai Nguyen - ICo
+### Dépôt Github:
+* Backend : https://github.com/nguyen703/TP3-Observability
+* Frontend : https://github.com/nguyen703/TP3-Observability-frontend
 
 ## Exercice 1 : Profilage des utilisateurs via les logs
 
