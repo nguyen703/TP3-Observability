@@ -24,6 +24,14 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'fr.inria.gforge.spoon:spoon-core:11.2.0'
     implementation 'com.google.code.gson:gson:2.10.1'
+    // Core Tracing capability
+    implementation 'io.micrometer:micrometer-tracing-bridge-otel'
+    // Exporter (sends traces to Jaeger/OTLP)
+    implementation 'io.opentelemetry:opentelemetry-exporter-otlp'
+
+    // Actuator (required to trigger metrics/tracing)
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }

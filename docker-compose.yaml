@@ -7,3 +7,12 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: tp3-jaeger
+    ports:
+      - "16686:16686" # The UI port
+      - "4318:4318"   # The OpenTelemetry Receiver port (HTTP)
+    environment:
+      - COLLECTOR_OTLP_ENABLED=true
+      - COLLECTOR_OTLP_HTTP_CORS_ALLOWED_ORIGINS=*
